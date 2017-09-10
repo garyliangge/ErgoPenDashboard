@@ -14,7 +14,7 @@ function distQuant(data, id){
 	function getPointsZero(_, i, k){		return _.map(function(d,j){ return {x:j, y:(i==k ? d[i] : 0 )};});	}
 	function toComma(x) {    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); }
 		
-	var width=850, height=400, margin=20;
+	var width=800, height=400, margin=20;
 	var colors = ["#E33E88","#929752","#5E54A9"];
 	
 	function draw(type){
