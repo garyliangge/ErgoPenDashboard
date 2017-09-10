@@ -97,17 +97,6 @@ function distQuant(data, id){
 		stat.append("rect").attr("x",-margin).attr("y",-margin)
 			.attr("width",width+2*margin).attr("height",margin).style("fill","white");
 			
-		// show sum and mean in statistics
-		if(type=="dist"){
-			stat.append("text").attr("class","count").attr("x",20).attr("y",-6)
-				.text(function(d){ 
-					var sum = d3.sum(data.dP.map(function(s){ return s[2];})); 
-					return "Count: " +toComma(sum)+" / "+toComma(sum)+" ( 100 % )";
-				});
-				
-			stat.append("text").attr("class","mean").attr("x",250).attr("y",-6)
-				.text(function(d){ return "Mean: " +data.mean;});
-		}
 	}
 	
 	function transitionIn(type, p){
@@ -134,17 +123,6 @@ function distQuant(data, id){
 		svg.selectAll(".hlines").transition().duration(500).attr("y1",tH).attr("y2",tH);						
 		svg.selectAll(".vlabels").selectAll("text").transition().duration(500)
 			.attr("transform",function(d,i){ return "translate(-10,"+(tH(d)-14)+")rotate(-90)";});	
-		
-		//update the statistics rect for distribution graph.
-		if(type=="dist"){
-			svg.select(".stat").select(".count")
-				.text(function(d){ 
-					var sumseg = data.dP[p][2]; 
-					var sum = d3.sum(data.dP.map(function(s){ return s[2];})); 
-					return "Count: " +toComma(sumseg)+" / "+toComma(sum)+" ( "+Math.round(100*sumseg/sum)+" % )";
-				});
-			svg.select(".stat").select(".mean").text(function(d){ return "Mean: " +data.dP[p][1];});
-		}
 	}
 	
 	function transitionOut(type){

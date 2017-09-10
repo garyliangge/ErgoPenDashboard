@@ -1,3 +1,8 @@
+* {
+ font-size: 100%;
+ font-family: Calibri;
+}
+
 path{
 	fill-opacity:0.8;
 	stroke-opacity:0;
@@ -40,30 +45,30 @@ svg{
 	border-spacing:0;
 }
 .legend tr, .legend td, .legend div{
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 10;
 }
 .legend div{
-	width:20px;
-	height:20px;
+	width: 20px;
+	height: 20px;
 	float: left;
 }
 .legend span{
 	padding: 0 5px;
-	margin:0
+	margin: 5px;
 }
 .legend tr:hover{
 	background:silver;
 }
 .distquantdiv{
-	clear:both;
-	padding:10px;
-	overflow:hidden;
+	clear: both;
+	padding: 10px;
+	overflow: hidden;
 	margin: 20px;
 }
 .distquantdiv h3{
 	padding-left: 40px;
-	margin-bottom:0;
+	margin-bottom: 0;
 }
 .stat{
 	font-size:12px;
