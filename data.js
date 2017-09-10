@@ -1,8 +1,8 @@
 var dqData=[];
 dqData.push({title:'ErgoPen Velocity Dashboard',
 dP:[
-['Absolute X-Axis Velocity',-0.0435,32937],
-['Absolute Z-Axis Velocity',-0.2651,132],
+['Absolute Z-Axis Velocity',-0.0435,32937],
+['Absolute X-Axis Velocity',-0.2651,132],
 ['Absolute Y-Axis Velocity',-0.0694,1164],
 ],
 distMin:0,distMax:500,
